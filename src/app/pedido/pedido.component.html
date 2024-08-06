@@ -1,0 +1,28 @@
+<h2>{{ pedido.id ? 'Editar Pedido' : 'Novo Pedido' }}</h2>
+
+<label>Produto:</label>
+<select [(ngModel)]="produtoSelecionadoId">
+  @for(produto of produtos; track produto.id){
+    <option [value]="produto.id">
+      {{ produto.nome }} - R$ {{ produto.preco }}
+    </option>
+  }
+</select>
+<br>
+<label>Quantidade:</label>
+<input min="1"  type="number" [(ngModel)]="quantidade" />
+<br>
+<button (click)="adicionarProduto()">Adicionar Produto</button>
+
+<ul>
+  @for(item of pedido.produtos; track item.produto.id){
+    <li>
+      {{ item.produto.nome }} - R$ {{ item.produto.preco }} - Quantidade: {{ item.quantidade }}
+    </li>
+  }
+</ul>
+
+<button (click)="salvarPedido()">Salvar Pedido</button>
+@if (pedido.id) {
+  <button routerLink="/listar-pedidos">Cancelar</button>
+}

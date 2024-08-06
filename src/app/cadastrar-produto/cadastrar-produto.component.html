@@ -1,0 +1,13 @@
+<h2>Cadastrar Produto</h2>
+@if (mensagem) {
+  <div>{{ mensagem }}</div>
+}
+<label>Nome do Produto:</label>
+<input [(ngModel)]="nomeProduto" />
+<br>
+<label>Preço do Produto:</label>
+<input min="0.1" type="number" [(ngModel)]="precoProduto" />
+<br>
+<button (click)="cadastrarProduto()">Cadastrar Produto</button>
+<br>
+<button routerLink="/listar-pedidos">Voltar</button>

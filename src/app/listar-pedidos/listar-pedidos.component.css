@@ -1,0 +1,43 @@
+.example-button-row .mat-mdc-button-base {
+  margin: 8px 8px 8px 0;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.menu-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.post_add_button {
+  background-color: gray;
+}
+
+.add_box_button {
+  background-color: lightskyblue;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.add_product_button {
+  margin: 5px;
+  background-color: lightgreen;
+}
+
+.cancel_order_button {
+  margin: 5px;
+  background-color: lightcoral;
+}
+
+.remove_product_button {
+  margin: 3px;
+  background-color: lightcoral!important;
+}

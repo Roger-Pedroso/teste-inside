@@ -46,7 +46,7 @@ describe('CadastrarProdutoComponent', () => {
     );
   });
 
-  it('should set mensagem and clear inputs on successful product registration', () => {
+  it('should set mensagem and clear inputs on successful produto registration', () => {
     pedidosServiceMock.cadastrarProduto.and.returnValue(
       of('Produto cadastrado com sucesso.')
     );

@@ -22,7 +22,7 @@
   }
 </ul>
 
-<button (click)="salvarPedido()">Salvar Pedido</button>
-@if (pedido.id) {
-  <button routerLink="/listar-pedidos">Cancelar</button>
+@if (!pedido.id) {
+  <button (click)="salvarPedido()">Salvar Pedido</button>
 }
+<button routerLink="/listar-pedidos">Voltar</button>

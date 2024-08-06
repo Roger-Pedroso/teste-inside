@@ -3,7 +3,6 @@ import { ListarPedidosComponent } from './listar-pedidos.component';
 import { PedidosService } from '../pedidos.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { of } from 'rxjs';
-import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 
@@ -41,7 +40,7 @@ describe('ListarPedidosComponent', () => {
 
     await TestBed.configureTestingModule({
       declarations: [ListarPedidosComponent],
-      imports: [RouterTestingModule, HttpClientTestingModule],
+      imports: [HttpClientTestingModule],
       providers: [
         { provide: PedidosService, useValue: pedidosServiceStub },
         { provide: ActivatedRoute, useValue: activatedRouteStub },
